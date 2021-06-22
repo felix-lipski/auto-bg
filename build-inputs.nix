@@ -6,7 +6,4 @@ let
     extraLibs = with pkgs.python39Packages; [ pillow ];
   };
 in
-
-pkgs.mkShell {
-  buildInputs = (import ./build-inputs.nix) { inherit pkgs; };
-}
+[ customPython ]
